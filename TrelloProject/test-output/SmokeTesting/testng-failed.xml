@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SmokeTesting]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="SmokeTesting(failed)">
+    <groups>
+      <run>
+        <include name="smoketesting"/>
+        <exclude name="systemtesting"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.trello.testcases.TrelloBoards">
+        <methods>
+          <include name="trelloHomePageCheck"/>
+          <include name="trelloLoginPageCheck"/>
+        </methods>
+      </class> <!-- com.trello.testcases.TrelloBoards -->
+    </classes>
+  </test> <!-- SmokeTesting(failed) -->
+</suite> <!-- Failed suite [SmokeTesting] -->

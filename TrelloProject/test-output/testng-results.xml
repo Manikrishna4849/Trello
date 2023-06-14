@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[BoardTitleTextField is visible]]>
+    </line>
+    <line>
+      <![CDATA[BoardTitleTextField is visible]]>
+    </line>
+    <line>
+      <![CDATA[BoardTitleTextField is visible]]>
+    </line>
+    <line>
+      <![CDATA[BoardTitleTextField is visible]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-06-12T08:56:32 IST" name="compatibilitytesting" finished-at="2023-06-12T08:58:26 IST" duration-ms="113693">
+    <groups>
+      <group name="smoketesting">
+        <method signature="TrelloBoards.trelloHomePageCheck()[pri:1, instance:com.trello.testcases.TrelloBoards@3232a28a]" name="trelloHomePageCheck" class="com.trello.testcases.TrelloBoards"/>
+        <method signature="TrelloBoards.trelloLoginPageCheck()[pri:2, instance:com.trello.testcases.TrelloBoards@3232a28a]" name="trelloLoginPageCheck" class="com.trello.testcases.TrelloBoards"/>
+        <method signature="TrelloBoards.trelloHomePageCheck()[pri:1, instance:com.trello.testcases.TrelloBoards@48aca48b]" name="trelloHomePageCheck" class="com.trello.testcases.TrelloBoards"/>
+        <method signature="TrelloBoards.trelloLoginPageCheck()[pri:2, instance:com.trello.testcases.TrelloBoards@48aca48b]" name="trelloLoginPageCheck" class="com.trello.testcases.TrelloBoards"/>
+      </group> <!-- smoketesting -->
+      <group name="systemtesting">
+        <method signature="TrelloBoards.trelloBoardPageCheck()[pri:3, instance:com.trello.testcases.TrelloBoards@3232a28a]" name="trelloBoardPageCheck" class="com.trello.testcases.TrelloBoards"/>
+        <method signature="TrelloBoards.trelloCreateAndDeleteBoard()[pri:4, instance:com.trello.testcases.TrelloBoards@3232a28a]" name="trelloCreateAndDeleteBoard" class="com.trello.testcases.TrelloBoards"/>
+        <method signature="TrelloBoards.trelloCreateMultipleListAndSwapInCreatedBoard()[pri:5, instance:com.trello.testcases.TrelloBoards@3232a28a]" name="trelloCreateMultipleListAndSwapInCreatedBoard" class="com.trello.testcases.TrelloBoards"/>
+        <method signature="TrelloBoards.trelloBoardPageCheck()[pri:3, instance:com.trello.testcases.TrelloBoards@48aca48b]" name="trelloBoardPageCheck" class="com.trello.testcases.TrelloBoards"/>
+        <method signature="TrelloBoards.trelloCreateAndDeleteBoard()[pri:4, instance:com.trello.testcases.TrelloBoards@48aca48b]" name="trelloCreateAndDeleteBoard" class="com.trello.testcases.TrelloBoards"/>
+        <method signature="TrelloBoards.trelloCreateMultipleListAndSwapInCreatedBoard()[pri:5, instance:com.trello.testcases.TrelloBoards@48aca48b]" name="trelloCreateMultipleListAndSwapInCreatedBoard" class="com.trello.testcases.TrelloBoards"/>
+      </group> <!-- systemtesting -->
+    </groups>
+    <test started-at="2023-06-12T08:56:32 IST" name="firefoxtest" finished-at="2023-06-12T08:58:26 IST" duration-ms="113661">
+      <class name="com.trello.testcases.TrelloBoards">
+        <test-method is-config="true" signature="configBeforemethod(java.lang.String)[pri:0, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:56:32 IST" name="configBeforemethod" finished-at="2023-06-12T08:56:38 IST" duration-ms="6394" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBeforemethod -->
+        <test-method signature="trelloHomePageCheck()[pri:1, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:56:38 IST" name="trelloHomePageCheck" finished-at="2023-06-12T08:56:40 IST" duration-ms="1637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trelloHomePageCheck -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:56:40 IST" name="configAfterMethod" finished-at="2023-06-12T08:56:41 IST" duration-ms="732" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAfterMethod -->
+        <test-method is-config="true" signature="configBeforemethod(java.lang.String)[pri:0, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:56:41 IST" name="configBeforemethod" finished-at="2023-06-12T08:56:44 IST" duration-ms="3678" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBeforemethod -->
+        <test-method signature="trelloLoginPageCheck()[pri:2, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:56:44 IST" name="trelloLoginPageCheck" finished-at="2023-06-12T08:56:50 IST" duration-ms="5273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trelloLoginPageCheck -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:56:50 IST" name="configAfterMethod" finished-at="2023-06-12T08:56:52 IST" duration-ms="1898" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAfterMethod -->
+        <test-method is-config="true" signature="configBeforemethod(java.lang.String)[pri:0, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:56:52 IST" name="configBeforemethod" finished-at="2023-06-12T08:56:55 IST" duration-ms="3774" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBeforemethod -->
+        <test-method signature="trelloBoardPageCheck()[pri:3, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:56:55 IST" name="trelloBoardPageCheck" finished-at="2023-06-12T08:57:16 IST" duration-ms="20251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trelloBoardPageCheck -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:57:16 IST" name="configAfterMethod" finished-at="2023-06-12T08:57:16 IST" duration-ms="713" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAfterMethod -->
+        <test-method is-config="true" signature="configBeforemethod(java.lang.String)[pri:0, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:57:16 IST" name="configBeforemethod" finished-at="2023-06-12T08:57:20 IST" duration-ms="3475" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBeforemethod -->
+        <test-method signature="trelloCreateAndDeleteBoard()[pri:4, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:57:20 IST" name="trelloCreateAndDeleteBoard" finished-at="2023-06-12T08:57:50 IST" duration-ms="30074" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[BoardTitleTextField is visible]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- trelloCreateAndDeleteBoard -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:57:50 IST" name="configAfterMethod" finished-at="2023-06-12T08:57:51 IST" duration-ms="953" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAfterMethod -->
+        <test-method is-config="true" signature="configBeforemethod(java.lang.String)[pri:0, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:57:51 IST" name="configBeforemethod" finished-at="2023-06-12T08:57:55 IST" duration-ms="3725" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBeforemethod -->
+        <test-method signature="trelloCreateMultipleListAndSwapInCreatedBoard()[pri:5, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:57:55 IST" name="trelloCreateMultipleListAndSwapInCreatedBoard" finished-at="2023-06-12T08:58:25 IST" duration-ms="29942" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[BoardTitleTextField is visible]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- trelloCreateMultipleListAndSwapInCreatedBoard -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.trello.testcases.TrelloBoards@48aca48b]" started-at="2023-06-12T08:58:25 IST" name="configAfterMethod" finished-at="2023-06-12T08:58:26 IST" duration-ms="1071" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAfterMethod -->
+      </class> <!-- com.trello.testcases.TrelloBoards -->
+    </test> <!-- firefoxtest -->
+    <test started-at="2023-06-12T08:56:32 IST" name="chrometest" finished-at="2023-06-12T08:58:26 IST" duration-ms="113693">
+      <class name="com.trello.testcases.TrelloBoards">
+        <test-method is-config="true" signature="configBeforemethod(java.lang.String)[pri:0, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:56:32 IST" name="configBeforemethod" finished-at="2023-06-12T08:56:38 IST" duration-ms="6316" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBeforemethod -->
+        <test-method signature="trelloHomePageCheck()[pri:1, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:56:38 IST" name="trelloHomePageCheck" finished-at="2023-06-12T08:56:40 IST" duration-ms="1712" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trelloHomePageCheck -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:56:40 IST" name="configAfterMethod" finished-at="2023-06-12T08:56:41 IST" duration-ms="652" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAfterMethod -->
+        <test-method is-config="true" signature="configBeforemethod(java.lang.String)[pri:0, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:56:41 IST" name="configBeforemethod" finished-at="2023-06-12T08:56:44 IST" duration-ms="3695" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBeforemethod -->
+        <test-method signature="trelloLoginPageCheck()[pri:2, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:56:44 IST" name="trelloLoginPageCheck" finished-at="2023-06-12T08:56:50 IST" duration-ms="5471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trelloLoginPageCheck -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:56:50 IST" name="configAfterMethod" finished-at="2023-06-12T08:56:52 IST" duration-ms="1756" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAfterMethod -->
+        <test-method is-config="true" signature="configBeforemethod(java.lang.String)[pri:0, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:56:52 IST" name="configBeforemethod" finished-at="2023-06-12T08:56:55 IST" duration-ms="3463" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBeforemethod -->
+        <test-method signature="trelloBoardPageCheck()[pri:3, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:56:55 IST" name="trelloBoardPageCheck" finished-at="2023-06-12T08:57:15 IST" duration-ms="19992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trelloBoardPageCheck -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:57:15 IST" name="configAfterMethod" finished-at="2023-06-12T08:57:16 IST" duration-ms="905" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAfterMethod -->
+        <test-method is-config="true" signature="configBeforemethod(java.lang.String)[pri:0, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:57:16 IST" name="configBeforemethod" finished-at="2023-06-12T08:57:20 IST" duration-ms="3849" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBeforemethod -->
+        <test-method signature="trelloCreateAndDeleteBoard()[pri:4, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:57:20 IST" name="trelloCreateAndDeleteBoard" finished-at="2023-06-12T08:57:51 IST" duration-ms="30787" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[BoardTitleTextField is visible]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- trelloCreateAndDeleteBoard -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:57:51 IST" name="configAfterMethod" finished-at="2023-06-12T08:57:51 IST" duration-ms="742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAfterMethod -->
+        <test-method is-config="true" signature="configBeforemethod(java.lang.String)[pri:0, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:57:51 IST" name="configBeforemethod" finished-at="2023-06-12T08:57:55 IST" duration-ms="3346" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBeforemethod -->
+        <test-method signature="trelloCreateMultipleListAndSwapInCreatedBoard()[pri:5, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:57:55 IST" name="trelloCreateMultipleListAndSwapInCreatedBoard" finished-at="2023-06-12T08:58:25 IST" duration-ms="30071" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[BoardTitleTextField is visible]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- trelloCreateMultipleListAndSwapInCreatedBoard -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:com.trello.testcases.TrelloBoards@3232a28a]" started-at="2023-06-12T08:58:25 IST" name="configAfterMethod" finished-at="2023-06-12T08:58:26 IST" duration-ms="875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAfterMethod -->
+      </class> <!-- com.trello.testcases.TrelloBoards -->
+    </test> <!-- chrometest -->
+  </suite> <!-- compatibilitytesting -->
+</testng-results>
