@@ -1,9 +1,13 @@
 package com.trello.pomrepository;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import net.bytebuddy.asm.MemberSubstitution.FieldValue;
 
 public class TrelloBoardsPage {
 	WebDriver driver;
@@ -19,7 +23,7 @@ public class TrelloBoardsPage {
 	@FindBy(xpath = "//span[normalize-space()='Log out']")
 	private WebElement logoutOption;
 
-	@FindBy(xpath = "//p[@class='szBTSFrvPTLGHM']")
+	@FindBy(xpath = "//button[@aria-label='Create board or Workspace']") 
 	private WebElement createOptionButton;
 
 	@FindBy(xpath = "//button[@data-testid='header-create-board-button']")
@@ -31,6 +35,18 @@ public class TrelloBoardsPage {
 	@FindBy(xpath = "//button[contains(text(),'Create')]")
 	private WebElement createButton;
 
+	@FindBy(xpath = "//a[@aria-label='Back to home']")
+	private WebElement backToHome;
+	
+	@FindBy(css = "div[class='board-tile-details-name']")
+	private List<WebElement> boards;
+	
+	public List<WebElement> getBoards() {
+		return boards;
+	}
+	public WebElement getBackToHome() {
+		return backToHome;
+	}
 	public WebElement getProfileButton() {
 		return profileButton;
 	}

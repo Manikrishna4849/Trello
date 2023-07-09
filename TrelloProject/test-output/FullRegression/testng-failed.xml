@@ -6,11 +6,7 @@
       <class name="com.trello.testcases.TrelloBoards">
         <methods>
           <include name="trelloBoardPageCheck"/>
-          <include name="trelloCreateAndDeleteBoard"/>
-          <include name="trelloHomePageCheck"/>
-          <include name="trelloLoginPageCheck"/>
           <include name="configBeforemethod"/>
-          <include name="trelloCreateMultipleListAndSwapInCreatedBoard"/>
           <include name="configAfterMethod"/>
         </methods>
       </class> <!-- com.trello.testcases.TrelloBoards -->

@@ -14,7 +14,7 @@ public class TrelloLoginpage {
 	}
 
 	@FindBy(xpath = "//input[@id='user']")
-	private WebElement logintextField;
+	private WebElement logintextField;  //
 
 	@FindBy(id = "login")
 	private WebElement continueButton;

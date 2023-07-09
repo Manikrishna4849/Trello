@@ -5,32 +5,37 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import com.qspiders.trello.pomrepository.TrelloLoginPage;
 import com.trello.genericutility.BaseClass;
 import com.trello.pomrepository.TrelloBoardsPage;
 import com.trello.pomrepository.TrelloCreatedBoardPage;
 import com.trello.pomrepository.TrelloHomePage;
 import com.trello.pomrepository.TrelloLoginIntoContinuePage;
+import com.trello.pomrepository.TrelloLoginpage;
 import com.trello.pomrepository.TrelloLogoutPage;
 
 public class TrelloBoards extends BaseClass {
-	@Test(priority = 3, groups = { "systemtesting" })
+	@Test(priority = 3, groups = "systemtesting")
 	public void trelloBoardPageCheck() throws Exception {
 		webdriverutils.implicityWait(driver);
 		TrelloHomePage trello = new TrelloHomePage(driver);
 		String actualHomePageTitle = driver.getTitle();
 		Assert.assertEquals(actualHomePageTitle, excelUtility.stringCommonData("mySheet", 0, 1),
 				"HomePage Title IS Found and It is not Verified");
-		trello.getLoginOption().click();
+		webdriverutils.explicityWaitForButton(driver, trello.getLoginOption()).click();
+		String exceptedLoginPageTitle = excelUtility.stringCommonData("mySheet", 1, 1);
+		webdriverutils.explicitWaitForPartialTitle(driver, exceptedLoginPageTitle);
 		String actualLoginPageTitle = driver.getTitle();
-		Assert.assertEquals(actualLoginPageTitle, excelUtility.stringCommonData("mySheet", 1, 1),
+		Assert.assertEquals(actualLoginPageTitle, exceptedLoginPageTitle,
 				"LoginPageUrl Tile Found Correct and It is Not Verified");
+		String exceptedLoginPageurl = excelUtility.stringCommonData("mySheet", 2, 1);
+		webdriverutils.explicityPartialurl(driver, exceptedLoginPageurl);
 		String actualLoginPageurl = driver.getCurrentUrl();
-		Assert.assertEquals(actualLoginPageurl, excelUtility.stringCommonData("mySheet", 2, 1),
-				"AtualLoginPageurl Found and It Is Not Verified");
-		TrelloLoginPage trelloLogin = new TrelloLoginPage(driver);
-		trelloLogin.getEmailTextField().sendKeys(fileutils.readCommondata("username"));
-		trelloLogin.getContinueSubmitButton().submit();
+		Assert.assertEquals(actualLoginPageurl, exceptedLoginPageurl, "ActualLoginPageurl Found and It Is Not Verified");
+		TrelloLoginpage trelloLogin = new TrelloLoginpage(driver);
+		//Thread.sleep(2000);
+		webdriverutils.explicityWaitForButton(driver, trelloLogin.getLogintextField())
+				.sendKeys(fileutils.readCommondata("username"));
+		trelloLogin.getContinueButton().submit();
 		String exceptedLoginToContinuePagetitle = excelUtility.stringCommonData("mysheet", 3, 1);
 		webdriverutils.explicitywaitForCompleteTitle(driver, exceptedLoginToContinuePagetitle);
 		String actualLoginToContinuePagetitle = driver.getTitle();
@@ -72,14 +77,14 @@ public class TrelloBoards extends BaseClass {
 				"ActualHomePageUrlAfterLogout Found Correct And Its Verified");
 	}
 
-	@Test(priority = 2, groups = { "smoketesting" })
+	@Test(priority = 2, groups = "smoketesting")
 	public void trelloLoginPageCheck() throws Exception {
 		webdriverutils.implicityWait(driver);
-		TrelloHomePage trello = new TrelloHomePage(driver);
 		String actualHomePageTitle = driver.getTitle();
 		Assert.assertEquals(actualHomePageTitle, excelUtility.stringCommonData("mySheet", 0, 1),
 				"HomePage Title IS Found and It is not Verified");
-		trello.getLoginOption().click();
+		TrelloHomePage trello = new TrelloHomePage(driver);
+		webdriverutils.explicityWaitForButton(driver, trello.getLoginOption()).click();
 		String actualLoginPageTitle = driver.getTitle();
 		Assert.assertEquals(actualLoginPageTitle, excelUtility.stringCommonData("mySheet", 1, 1),
 				"LoginPageUrl Tile Found Correct and It is Not Verified");
@@ -88,7 +93,7 @@ public class TrelloBoards extends BaseClass {
 				"AtualLoginPageurl Found and It Is Not Verified");
 	}
 
-	@Test(priority = 1, groups = { "smoketesting" })
+	@Test(priority = 1, groups = "smoketesting")
 	public void trelloHomePageCheck() throws Exception {
 		webdriverutils.implicityWait(driver);
 		String exceptedHomePageTitle = excelUtility.stringCommonData("mySheet", 0, 1);
@@ -98,28 +103,31 @@ public class TrelloBoards extends BaseClass {
 				"HomePage Title IS Found and It is not Verified");
 	}
 
-	@Test(priority = 4, groups = { "systemtesting" })
+	@Test(priority = 4, groups = "systemtesting")
 	public void trelloCreateAndDeleteBoard() throws Exception {
 		webdriverutils.implicityWait(driver);
-		TrelloHomePage trello = new TrelloHomePage(driver);
 		String actualHomePageTitle = driver.getTitle();
 		Assert.assertEquals(actualHomePageTitle, excelUtility.stringCommonData("mySheet", 0, 1),
 				"HomePage Title IS Found and It is not Verified");
-		trello.getLoginOption().click();
+		TrelloHomePage trello = new TrelloHomePage(driver);
+		// trello.getLoginOption().click();
+		webdriverutils.explicityWaitForButton(driver, trello.getLoginOption()).click();
 		String actualLoginPageTitle = driver.getTitle();
 		Assert.assertEquals(actualLoginPageTitle, excelUtility.stringCommonData("mySheet", 1, 1),
 				"LoginPageUrl Tile Found Correct and It is Not Verified");
 		String actualLoginPageurl = driver.getCurrentUrl();
 		Assert.assertEquals(actualLoginPageurl, excelUtility.stringCommonData("mySheet", 2, 1),
 				"AtualLoginPageurl Found and It Is Not Verified");
-		TrelloLoginPage trelloLogin = new TrelloLoginPage(driver);
-		trelloLogin.getEmailTextField().sendKeys(fileutils.readCommondata("username"));
-		trelloLogin.getContinueSubmitButton().submit();
+		TrelloLoginpage trelloLogin = new TrelloLoginpage(driver);
+		webdriverutils.explicityWaitForButton(driver, trelloLogin.getLogintextField())
+				.sendKeys(fileutils.readCommondata("username"));
+		trelloLogin.getContinueButton().submit();
 		String exceptedLoginToContinuePagetitle = excelUtility.stringCommonData("mysheet", 3, 1);
 		webdriverutils.explicitywaitForCompleteTitle(driver, exceptedLoginToContinuePagetitle);
 		String actualLoginToContinuePagetitle = driver.getTitle();
 		Assert.assertEquals(actualLoginToContinuePagetitle, exceptedLoginToContinuePagetitle,
 				"Login To continue pageTitle  found correct and It Is Not verifed");
+
 		String exceptedLoginToContinuePageUrl = excelUtility.stringCommonData("mySheet", 4, 1);
 		Assert.assertEquals(webdriverutils.explicityPartialurl(driver, exceptedLoginToContinuePageUrl), true);
 		TrelloLoginIntoContinuePage loginPage = new TrelloLoginIntoContinuePage(driver);
@@ -139,11 +147,9 @@ public class TrelloBoards extends BaseClass {
 			Reporter.log("BoardTitleTextField is visible");
 		} else {
 			Reporter.log("BoardTitleTextField is Not visible");
-
 		}
 		boardsPage.getBoardTitleTextField().sendKeys(excelUtility.stringCommonData("mySheet", 11, 1));
-		boardsPage.getCreateButton().click();
-		Thread.sleep(3000);
+		webdriverutils.explicityWaitForButton(driver, boardsPage.getCreateButton()).click();
 		String exceptedCreatedBoardsPageTitle = excelUtility.stringCommonData("mySheet", 12, 1);
 		webdriverutils.explicitywaitForCompleteTitle(driver, exceptedCreatedBoardsPageTitle);
 		String actualCreatedBoardsPageTitle = driver.getTitle();
@@ -181,23 +187,24 @@ public class TrelloBoards extends BaseClass {
 				"ActualHomePageUrlAfterLogout Found Correct And Its Verified");
 	}
 
-	@Test(priority = 5, groups = { "systemtesting" })
+	@Test(priority = 5, groups = "systemtesting")
 	public void trelloCreateMultipleListAndSwapInCreatedBoard() throws Exception {
 		webdriverutils.implicityWait(driver);
-		TrelloHomePage trello = new TrelloHomePage(driver);
 		String actualHomePageTitle = driver.getTitle();
 		Assert.assertEquals(actualHomePageTitle, excelUtility.stringCommonData("mySheet", 0, 1),
 				"HomePage Title IS Found and It is not Verified");
-		trello.getLoginOption().click();
+		TrelloHomePage trello = new TrelloHomePage(driver);
+		webdriverutils.explicityWaitForButton(driver, trello.getLoginOption()).click();
 		String actualLoginPageTitle = driver.getTitle();
 		Assert.assertEquals(actualLoginPageTitle, excelUtility.stringCommonData("mySheet", 1, 1),
 				"LoginPageUrl Tile Found Correct and It is Not Verified");
 		String actualLoginPageurl = driver.getCurrentUrl();
 		Assert.assertEquals(actualLoginPageurl, excelUtility.stringCommonData("mySheet", 2, 1),
 				"AtualLoginPageurl Found and It Is Not Verified");
-		TrelloLoginPage trelloLogin = new TrelloLoginPage(driver);
-		trelloLogin.getEmailTextField().sendKeys(fileutils.readCommondata("username"));
-		trelloLogin.getContinueSubmitButton().submit();
+		TrelloLoginpage trelloLogin = new TrelloLoginpage(driver);
+		webdriverutils.explicityWaitForButton(driver, trelloLogin.getLogintextField())
+				.sendKeys(fileutils.readCommondata("username"));
+		trelloLogin.getContinueButton().submit();
 		String exceptedLoginToContinuePagetitle = excelUtility.stringCommonData("mysheet", 3, 1);
 		webdriverutils.explicitywaitForCompleteTitle(driver, exceptedLoginToContinuePagetitle);
 		String actualLoginToContinuePagetitle = driver.getTitle();
@@ -222,10 +229,9 @@ public class TrelloBoards extends BaseClass {
 			Reporter.log("BoardTitleTextField is visible");
 		} else {
 			Reporter.log("BoardTitleTextField is Not visible");
-
 		}
 		boardsPage.getBoardTitleTextField().sendKeys(excelUtility.stringCommonData("mySheet", 11, 1));
-		boardsPage.getCreateButton().click();
+		webdriverutils.explicityWaitForButton(driver, boardsPage.getCreateButton()).click();
 		String exceptedCreatedBoardsPageTitle = excelUtility.stringCommonData("mySheet", 12, 1);
 		webdriverutils.explicitywaitForCompleteTitle(driver, exceptedCreatedBoardsPageTitle);
 		String actualCreatedBoardsPageTitle = driver.getTitle();
